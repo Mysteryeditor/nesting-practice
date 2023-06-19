@@ -1,0 +1,22 @@
+<table>
+    <thead>
+        <th>Product</th>
+
+        <th>Quantity</th>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let q of productList">
+            <td>Soap</td>
+            <td>{{q}}
+                <input type="number" name="Quantity" id="Quantity" [value]=q>
+            </td>
+            <td>
+                <Button (click)="increment(q)">+</Button>
+            </td>
+            <td>
+                <button (click)="decrement(q)">-</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

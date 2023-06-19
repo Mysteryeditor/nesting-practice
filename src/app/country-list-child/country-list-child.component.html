@@ -1,0 +1,15 @@
+<div class="container">
+    <table>
+        <tr>
+            <th>
+                Countries
+            </th>
+        </tr>
+
+        <tr *ngFor="let c of countrieslist">
+            <td>{{c}}</td>
+<td><button (click)="selectCountry(c)"  >CHoose</button></td>
+        </tr>
+    </table>
+
+</div>
