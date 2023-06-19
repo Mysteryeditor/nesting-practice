@@ -1,4 +1,4 @@
-import { Component ,Input,Output,EventEmitter} from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -7,17 +7,21 @@ import { Component ,Input,Output,EventEmitter} from '@angular/core';
 })
 export class ChildComponent {
   @Input()
-productList:Array<number>=[];
-@Output()
-incEmit=new EventEmitter(); 
+  productList: Array<number> = [];
+  @Output()
+  // incrementing object
+  incEmit = new EventEmitter();
 
-increment(q:number){
-  this.incEmit.emit(q);
+  increment(q: number) {
+    this.incEmit.emit(q);
+  }
+
+  @Output()
+// decrementing object
+  decEmit = new EventEmitter();
+  decrement(q1: number) {
+    this.decEmit.emit(q1);
+  }
 }
 
-// decrement(q:number){
-//   this.is
-// }
 
-
-}
